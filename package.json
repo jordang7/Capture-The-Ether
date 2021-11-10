@@ -19,6 +19,7 @@
     "hardhat": "^2.0.2"
   },
   "dependencies": {
-    "keccak": "^3.0.2"
+    "keccak": "^3.0.2",
+    "keccak256": "^1.0.3"
   }
 }
