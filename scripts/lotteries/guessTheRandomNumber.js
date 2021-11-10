@@ -4,6 +4,11 @@ const keccak256 = require("keccak256");
 const GAME_ADDRESS = "0x2365148bfF089eB23101a0109aaa98F0e2245523";
 
 async function main() {
+  const game = await hre.ethers.getContractAt(
+    "GuessTheRandomNumberChallenge",
+    GAME_ADDRESS
+  );
+
   const num = await hre.ethers.provider.getStorageAt(GAME_ADDRESS, 0);
 
   const tx = await game.guess(BigNumber.from(num), {
